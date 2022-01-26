@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial Number</title>
+    <style>
+    .container{
+        width: 100vw;
+        height: 200px;
+        background-color: hotpink;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h>Factorial number using Recursion.</h>
+        <input type="text" id ="text"> <br> <br>
+        <button onclick="factorial()">Factorial</button> <br> <br>
+        <input type="text" id="res">
+    </div>
+    
+    <script>
+        function fact(x){
+            if(x == 0)
+            return 1;
+            else 
+            return x * fact(x - 1);
+        }
+        function factorial(){
+            var a = document.getElementById('text').value;
+            if(a =="")
+            alert("Enter any positive number")
+            else if(a>=0){
+                const output = fact(a);
+                document.getElementById('res').value = output;
+            }
+        }
+    </script>
+        </body>
+</html>
